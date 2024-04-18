@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Uni Sans Heavy;
+    src: url(../uni-sans/Uni\ Sans\ Heavy.otf);
+}
+
+body {
+    font-family: Uni Sans Heavy, Arial;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../images/paltinis2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navbar .active {
+    color: coral !important;
+    font-weight: 700;
+}
+
+/*Column syling*/
+.col {
+    min-width: 300px;
+}
+
+h1 {
+    font-family: Uni Sans Heavy;
+    color: #f3f4f6 !important;
+}
+
+p {
+    font-family: Uni Sans Heavy;
+    color: #f3f4f6;
+}
+
+.btn {
+    border-radius: 20px !important;
+}
+
+.btn:hover {
+    background-color: coral !important;
+    color: #fff !important;
+    border: none;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.coord-input {
+    margin: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid coral;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
+    max-width: 150px;
+}
+
+form button {
+    padding: 0.3rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid coral;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin-right: 1rem;
+}
+
+.content-right {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-right h2 {
+    color: #fff;
+    font-weight: 550;
+    font-size: 1.8rem;
+}
+.card {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:none !important;
+    border: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chosen-point {
+    padding: 0rem 1rem 1rem 1rem;
+    font-weight: bold;
+}
+
+.chosen-point,
+.temp-display,
+.feels-like-display,
+.description-display,
+.wind-display,
+.visibility-display {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    padding:0;
+}
+
+.emoji-display {
+    font-size: 3rem;
+}
+
+.error-display {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/*if smaller than 'sm'*/
+@media screen and (max-width: 576px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/*if bigger than 'md'*/
+@media (min-width: 767.98px) {
+    main {
+        min-height: 90dvh;
+    }
+
+    .col {
+        margin: 3rem;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}

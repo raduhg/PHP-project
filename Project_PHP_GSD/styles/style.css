@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Uni Sans Heavy;
+    src: url(../uni-sans/Uni\ Sans\ Heavy.otf);
+}
+
+body {
+    font-family: Uni Sans Heavy, Arial;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url("../images/vedere_creasta.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 56px;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navbar .active {
+    color: coral !important;
+    font-weight: 700;
+}
+
+#landing-text {
+    font-family: Uni Sans Heavy;
+    color: #fff;
+}
+
+#landing-text h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+}
+
+#landing-text p {
+    color: #f3f4f6;
+    letter-spacing: 0.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn-light:hover {
+    background-color: coral !important;
+    color:#fff !important;
+    border:none;
+}
+
+@media screen and (max-width: 576px) {
+    #landing-text h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #f3f4f6;
+        font-weight: 700;
+    }
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/*if bigger than 'md'*/
+@media (min-width: 767.98px) {
+    .left-align {
+        max-width: 30%;
+        min-width: 440px
+    }
+    main {
+        min-height: 90dvh;
+    }
+}
+
+.col {
+    min-width: 250px;
+}

@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: Uni Sans Heavy;
+    src: url(../uni-sans/Uni\ Sans\ Heavy.otf);
+  }
+  
+  body {
+    font-family: Uni Sans Heavy, Arial;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("../images/piatra_singuratica.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /*Navbar styling*/
+  .navbar {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar .active {
+    color: coral !important;
+    font-weight: 700;
+  }
+   /*Main section styling*/
+  main {
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+  }
+  
+  main .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 70px;
+  }
+  
+  main .heading h1 {
+    color: #fff
+  }
+  
+  .form {
+    grid-area: form;
+  }
+  
+  .info {
+    grid-area: info;
+  }
+  
+  .map {
+    grid-area: map;
+  }
+  
+  .contact {
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact h3 {
+    color: #fff;
+  }
+  
+  .contact h2 {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .main-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas:
+      "form info"
+      "form map";
+    grid-gap: 20px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .main-container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr;
+      grid-template-rows: 5fr;
+      grid-template-areas:
+        "form"
+        "info"
+        "map";
+      grid-gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 740px) {
+    main {
+      padding: 1%
+    }
+  
+    .main-container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr;
+      grid-template-rows: 5fr;
+      grid-template-areas:
+        "form"
+        "info"
+        "map";
+      grid-gap: 20px;
+    }
+  
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .input-box textarea {
+      padding: 10px;
+      font-size: 1.1rem;
+      border: 1px solid black;
+      outline: none;
+      resize: inherit;
+      min-height: 220px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      color: #b1b1b1;
+    }
+  
+    .map iframe {
+      width: 90%;
+  
+    }
+  }
+  
+  /*Form styling*/
+  .form-box {
+    position: relative;
+    width: 100%;
+  }
+  
+  .form-box .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-box .form-row-message .input-box {
+    width: 100%;
+  }
+  
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  
+  .input-box span {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  .input-box input {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: #b1b1b1
+  }
+  
+  .input-box textarea {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    outline: none;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    color: #b1b1b1;
+  }
+  
+  .input-box input[type="submit"] {
+    background: coral;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    max-width: 120px;
+    cursor: pointer;
+    padding: 14px 15px;
+  }
+  
+  .errors {
+    color: red;
+  }
+
+  .success {
+    color: green;
+  }
+  
+  /*Contact styling*/
+  .info-box span {
+  
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .contact-info-row {
+    padding: 1rem;
+    color: #b1b1b1;
+  }
+  
+  .contact-info-row a,
+  p {
+    color: #b1b1b1;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*Map styling*/
+  .map {
+    padding: 0;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*if smaller than 'sm'*/
+  @media screen and (max-width: 576px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+  /*if bigger than 'md'*/
+  @media (min-width: 767.98px) {
+    main {
+        min-height: 90dvh;
+    }
+  
+    .col {
+        margin: 3rem;
+    }
+  
+    iframe {
+        width: 100%;
+    }
+  }
+  footer {
+    max-height: 450px;
+  }
